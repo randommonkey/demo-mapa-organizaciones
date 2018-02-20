@@ -1,0 +1,95 @@
+<div class="Row VCenter space-between overlay-nav">
+  <div>
+    <a href="" class="active organization-section-anchor" data-section="file-card">Ficha</a>
+    {{#equals priority 1}}
+      <a href="" class="organization-section-anchor" data-section="profile">Perfil</a>
+    {{/equals}}
+    <a href="" class="organization-section-anchor" data-section="publications">Publicaciones</a>
+  </div>
+  <span class="back">Volver</span>
+</div>
+<div id="file-card" class="info-section">
+  <div class="file-card-section">
+    <div class="section-subtitle-container">
+      <h3 class="section-subtitle">{{name}}</h3>
+    </div>
+    {{#and founded incidence}}
+      <small class="founded">Lanzamiento: {{founded}} / Incidencia {{incidence}}</small>
+    {{else}}
+      {{#if founded}}
+        <small class="founded">Lanzamiento: {{founded}}</small>
+      {{else if incidence}}
+        <small class="founded">Incidencia / {{incidence}}</small>
+      {{/if}}
+    {{/and}}
+    <p class="section-text">{{description}}</p>
+  </div>
+  {{#if contact}}
+    <div class="file-card-section">
+      <div class="section-subtitle-container">
+        <p class="section-subtitle">Contacto</p>
+      </div>
+      <ul class="contact">
+        {{#each contact}}
+          <li><a href={{this}} target="_blank" rel="noopener noreferrer">{{this}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+  {{#if founder}}
+    <div class="file-card-section">
+      <div class="section-subtitle-container">
+        <p class="section-subtitle">Líder</p>
+      </div>
+      {{#each founder}}
+        <p class="section-text">{{this}}</p>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if causes}}
+    <div class="file-card-section">
+      <div class="section-subtitle-container">
+        <p class="section-subtitle">Causas</p>
+      </div>
+      <div class="causes Row wrap">
+        {{#each causes}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if actions}}
+    <div class="file-card-section">
+      <div class="section-subtitle-container">
+        <p class="section-subtitle">Acciones</p>
+      </div>
+      <div class="actions Column">
+        {{#each actions}}
+          <p class="section-text"><strong>{{date}}</strong> {{description}}</p>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+</div>
+<div id="profile" class="hidden info-section">
+  {{#if image}}
+    <figure>
+      <img src="{{image}}">
+      <figcaption>{{caption}}</figcaption>
+    </figure>
+  {{/if}}
+  <p class="section-text">{{{profile}}}</p>
+</div>
+<div id="publications" class="hidden info-section">
+  {{#if publications}}
+    {{#each publications}}
+      <div class="publication">
+        <p class="publication-year">{{year}}</p>
+        <p class="publication-title">{{title}}</p>
+        <a href="{{url}}" target="_blank" rel="noopener noreferrer">Ver más</a>
+      </div>
+    {{/each}}
+  {{else}}
+    <p class="section-text">Esta organización aún no tiene publicaciones disponibles</p>
+  {{/if}}
+</div>

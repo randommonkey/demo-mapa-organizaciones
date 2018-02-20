@@ -1,0 +1,33 @@
+<div class="Column" style="height: 100%">
+  <div class="Row VCenter space-between overlay-nav">
+    <div class="Row VCenter">
+      <div class="Row VCenter">
+        <div class="bullet bullet-red"></div>
+        <div class="dropdown-container">
+          <a class="dropdown-trigger" href="">
+            Causas
+          </a>
+          <div class="dropdown-content Column">
+            {{#each causes}}
+              <a href="" data-filter="{{label}}" class="filter">{{label}} /</a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div class="Row VCenter">
+        <div class="bullet bullet-black"></div>
+        <a>Organizaciones</a>
+      </div>
+    </div>
+    <span class="close">x</span>
+  </div>
+  <div class="fill about-content-box">
+    <div class="causes-list Row">
+      {{#each causes}}
+        <a href="" class="filter" data-filter="{{label}}">{{label}}</a>
+      {{/each}}
+    </div>
+    <svg id="network"></svg>
+    <div class="about"></div>
+  </div>
+</div>

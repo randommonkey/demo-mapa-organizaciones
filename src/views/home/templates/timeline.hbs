@@ -1,0 +1,44 @@
+<div class="Column" style="height: 100%">
+  <div class="Row VCenter space-between overlay-nav">
+    <div class="Row VCenter">
+      <div class="Row VCenter">
+        <div class="bullet bullet-red"></div>
+        <div class="dropdown-container">
+          <a class="dropdown-trigger" href="">
+            Causas
+          </a>
+          <div class="dropdown-content Column">
+            {{#each causes}}
+              <a href="" data-timeline="{{label}}" class="filter-timeline">{{label}} /</a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="close">x</span>
+  </div>
+  <div class="timeline fill">
+    <div class="timeline-causes Row">
+      {{#each causes}}
+        <a href="" data-timeline="{{label}}" class="filter-timeline">{{label}}</a>
+      {{/each}}
+    </div>
+    <div class="timeline-title hidden"><span>{{title}}</span></div>
+    {{#each events}}
+      <div class="timeline-item">
+        <div class="timeline-event">
+          <h2>{{year}}</h2>
+          <p>{{description}}</p>
+        </div>
+        {{#if image}}
+          <div class="timeline-image">
+            <img src="{{image}}" alt="">
+            {{#if caption}}
+              <small class="caption" style="margin: 0 20px;font-weight: 300">{{caption}}</small>
+            {{/if}}
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</div>

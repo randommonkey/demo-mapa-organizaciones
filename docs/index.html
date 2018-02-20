@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+  <!-- Leaflet css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css">
+  <title>Demo mapa organizaciones</title>
+<link href="css/home.css" rel="stylesheet"></head>
+<body>
+  <div id="wrapper" class="Column">
+    <header>
+      <div class="mobile">
+        <nav class="top-nav">
+				  <div class="Row Container VCenter">
+            <div class="fill"></div>
+            <a href="/"><img src="" alt="Logo" class="logo"></a>
+				  </div>
+			  </nav>
+			  <nav class="bottom-nav">
+				  <div class="Row Container space-between Vcenter">
+					  <a href="" class="nav-anchor anchor-active main-nav-anchor" data-tab="territories">Territorio</a>
+					  <a href="" class="nav-anchor" data-tab="causes">Causas</a>
+					  <a href="" class="nav-anchor" data-tab="timeline">Cronología</a>
+				  </div>
+			  </nav>
+      </div>
+      <div class="desktop">
+        <nav class="top-nav">
+          <div class="Row Container HCenter">
+            <a href="" class="nav-anchor anchor-active main-nav-anchor" data-tab="territories">Territorio</a>
+            <a href="" class="nav-anchor" data-tab="causes">Causas</a>
+            <a href="" class="nav-anchor" data-tab="timeline">Cronología</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="Column">
+      <div class="overlay">
+        <div class="overlay-content Container">
+          <div id="territories" class="tab-content">
+            <div class="text-right">
+              <span class="close">x</span>
+            </div>
+            <p class="text-center">Selecciona un departamento en el mapa</p>
+          </div>
+          <div id="causes" class="tab-content"><p>Espera un momento...</p></div>
+          <div id="timeline" class="tab-content"><p>Espera un momento...</p></div>
+        </div>
+      </div>
+      <div class="Row fill">
+        <div id="map"></div>
+      </div>
+    </main>
+  </div>
+<script type="text/javascript" src="js/home.c7b817848b898d32201a.bundle.js"></script></body>
+</html>
