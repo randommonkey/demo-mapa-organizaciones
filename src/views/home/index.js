@@ -1,10 +1,4 @@
 import './index.css'
-import logo from './images/divergentes.png'
-import vice from './images/vice.png'
-import pacifista from './images/pacifista.png'
-import datasketch from './images/datasketch.png'
-import konrad from './images/konrad.png'
-import osf from './images/osf.png'
 import { toggleClass } from './modules/utils'
 import { initializeNetwork, update } from './modules/network/network'
 import { manageTabs, addCloseEvent, filterNetworkEvent, showTimeline } from './modules/events'
@@ -14,12 +8,6 @@ import networkTemplate from './templates/network.hbs'
 import { requestSheet } from './modules/request'
 import { uniq } from 'lodash'
 
-Array.from(document.querySelectorAll('.logo')).forEach(image => image.src = logo)
-document.querySelector('.vice').src = vice
-document.querySelector('.pacifista').src = pacifista
-document.querySelector('.datasketch').src = datasketch
-document.querySelector('.konrad').src = konrad
-document.querySelector('.osf').src = osf
 const tabsLinks = Array.from(document.querySelectorAll('.nav-anchor'))
 const causesContent = document.getElementById('causes')
 
